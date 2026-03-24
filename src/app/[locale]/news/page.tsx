@@ -33,8 +33,8 @@ export default async function NewsPage({ params }: { params: Params }) {
       <section className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {t.posts.map((post) => (
           <Card key={post.title} title={post.title}>
-            <p className="text-sm text-sky-700">{post.excerpt}</p>
-            <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-sky-600">
+            <p className="text-sm text-[#464651]">{post.excerpt}</p>
+            <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-[#204873]">
               {post.date}
             </p>
           </Card>

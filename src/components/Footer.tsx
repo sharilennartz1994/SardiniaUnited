@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { BrandLogo } from "@/components/BrandLogo";
 import { Locale, getContent } from "@/i18n/content";
 
 type FooterProps = { locale: Locale };
@@ -8,24 +7,36 @@ export function Footer({ locale }: FooterProps) {
   const t = getContent(locale);
 
   return (
-    <footer className="mt-20 border-t border-sky-100 bg-white">
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 text-sm text-sky-900 md:flex-row md:items-center md:justify-between md:px-6">
-        <div className="flex items-center gap-3">
-          <BrandLogo variant="negative" showText={false} href={`/${locale}`} />
-          <p>
-            © {new Date().getFullYear()} Sardinia United. {t.footerText}
-          </p>
+    <footer className="mt-20 bg-[#030568] text-white">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 py-12">
+        <div className="text-2xl font-black tracking-tight">SARDINIA UNITED</div>
+        <div className="flex flex-wrap justify-center gap-8 text-xs font-semibold uppercase tracking-widest text-slate-300 md:text-sm">
+          <Link href="#" className="hover:text-white">
+            Privacy Policy
+          </Link>
+          <Link href="#" className="hover:text-white">
+            Terms of Service
+          </Link>
+          <Link href="#" className="hover:text-white">
+            Cookie Policy
+          </Link>
+          <Link href="#" className="hover:text-white">
+            Sitemap
+          </Link>
         </div>
         <div className="flex items-center gap-4">
-          <Link href={`/${locale}/contact`} className="hover:text-sky-700">
-            {locale === "it" ? "Contatti" : "Contact"}
+          <Link href={`/${locale}/contact`} className="rounded-full border border-white/20 p-2.5 hover:bg-white hover:text-[#030568]">
+            ✉
           </Link>
-          <Link href={`/${locale}/support-us`} className="hover:text-sky-700">
-            {locale === "it" ? "Sostienici" : "Support Us"}
+          <Link href={`/${locale}/support-us`} className="rounded-full border border-white/20 p-2.5 hover:bg-white hover:text-[#030568]">
+            ❤
           </Link>
-          <Link href={`/${locale}/news`} className="hover:text-sky-700">
-            News
+          <Link href={`/${locale}/news`} className="rounded-full border border-white/20 p-2.5 hover:bg-white hover:text-[#030568]">
+            ↗
           </Link>
+        </div>
+        <div className="w-full border-t border-white/10 pt-8 text-center text-xs uppercase tracking-widest text-slate-400">
+          © {new Date().getFullYear()} Sardinia United. {t.footerText}
         </div>
       </div>
     </footer>

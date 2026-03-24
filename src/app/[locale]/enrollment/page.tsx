@@ -24,16 +24,16 @@ export default async function EnrollmentPage({ params }: { params: Params }) {
   const t = getContent(locale);
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-10">
       <SectionHeader
         eyebrow={t.enrollment.eyebrow}
         title={t.enrollment.title}
         description={t.enrollment.description}
       />
 
-      <section className="rounded-2xl border border-sky-100 bg-white p-6 shadow-sm">
-        <h2 className="text-lg font-semibold text-sky-900">{t.enrollment.eligibility}</h2>
-        <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-sky-700">
+      <section className="rounded-[2rem] border border-[#c3c6d0]/35 bg-white p-7 shadow-sm">
+        <h2 className="text-xl font-black text-[#002444]">{t.enrollment.eligibility}</h2>
+        <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#464651]">
           {t.enrollment.rules.map((rule) => (
             <li key={rule}>{rule}</li>
           ))}
