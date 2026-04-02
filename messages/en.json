@@ -46,19 +46,20 @@
     },
     "Mission": {
       "tag": "· Our Mission ·",
-      "quote": "\"Sport as an educational right and inclusion - without economic barriers.\"",
+      "quoteBefore": "Sport as an educational right and",
       "highlightWord": "inclusion",
+      "quoteAfter": "without economic barriers.",
       "body": "ASD Sardinia United was born from the desire to break down every obstacle between young people and the playing field. We offer sporting excellence at zero cost for families."
     },
     "Stats": {
       "stat1": "80",
       "label1": "Children",
-      "stat2": "60",
+      "stat2": "60~",
       "label2": "Families",
-      "stat3": "4",
+      "stat3": "4~",
       "label3": "Tournaments",
-      "stat4": "5",
-      "label4": "Years"
+      "stat4": "4-12",
+      "label4": "Years (project)"
     },
     "HowItWorks": {
       "title": "How It Works",
@@ -152,8 +153,8 @@
     "contactUs": "Contact us: asdsardiniaunited@gmail.com",
     "changeAmount": "Change amount",
     "openFullPage": "Open full page",
-    "testimonialQuote": "«Without ASD Sardinia United we couldn't have let our son play. The team became his second family.»",
-    "testimonialAuthor": "- Parents of a project athlete"
+    "testimonialQuote": "«Talent wins games, but teamwork and intelligence win championships.»",
+    "testimonialAuthor": "- Michael Jordan"
   },
   "Calendario": {
     "comingSoonBadge": "Coming Soon",
@@ -192,7 +193,7 @@
     "notFoundBody": "The article you are looking for does not exist or has been moved.",
     "articleBody1": "This article is a placeholder: we'll soon share updates, numbers and stories from the field. In the meantime, thank you to everyone who supports the project and makes every training session possible.",
     "articleBody2": "Sport is an educational right and a tool for inclusion. Every day we work to ensure no child is left out of the game for economic or social reasons.",
-    "articleBody3": "Our futsal programme, combined with the work of our sports psychologist, aims to help children grow — not just as athletes, but as confident, resilient individuals.",
+    "articleBody3": "Our futsal programme, combined with the work of our sports psychologist, aims to help children grow - not just as athletes, but as confident, resilient individuals.",
     "articleBody4": "For information or to collaborate with ASD Sardinia United, please contact us through the official channels on our website. Together we build a fairer future through futsal and team values."
   },
   "Sponsor": {
@@ -372,7 +373,7 @@
     "phoneNumber": "+39 349 2358494"
   },
   "Metadata": {
-    "homeTitle": "Sport for All — ASD Sardinia United | Free Futsal for Children in Elmas",
+    "homeTitle": "Sport for All - ASD Sardinia United | Free Futsal for Children in Elmas",
     "homeDescription": "We guarantee children (4-12) from disadvantaged families the chance to play sport for free. ASD Sardinia United, Elmas (CA), Sardinia.",
     "donazioniTitle": "Donate - ASD Sardinia United",
     "donazioniDescription": "Support the Sport for All project. Your donation allows a child to discover sport for free.",
