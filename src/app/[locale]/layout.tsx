@@ -24,7 +24,7 @@ export default async function LocaleLayout({
         {typedLocale === "it" ? "Vai al contenuto principale" : "Skip to main content"}
       </a>
       <Navbar locale={typedLocale} />
-      <main id="main-content" className="mx-auto max-w-6xl px-4 py-8 md:px-6">
+      <main id="main-content" className="mx-auto max-w-7xl px-4 pb-8 pt-24 md:px-6 md:pt-28">
         {children}
       </main>
       <Footer locale={typedLocale} />
