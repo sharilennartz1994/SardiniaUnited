@@ -12,11 +12,16 @@
   "license": "ISC",
   "description": "Sardinia United non-profit sports association website.",
   "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.7.0",
     "next": "^16.2.1",
+    "next-intl": "^4.9.0",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.5",
     "@tailwindcss/postcss": "^4.2.2",
     "@types/node": "^25.5.0",
     "@types/react": "^19.2.14",

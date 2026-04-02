@@ -1,27 +1,16 @@
 import type { Metadata } from "next";
-import "./globals.css";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Sardinia United | Free Futsal for Children",
-    template: "%s | Sardinia United"
-  },
+  title: "ASD Sardinia United",
   description:
-    "Sardinia United is a non-profit association offering free football activities for children aged 4-12 from economically disadvantaged families in Sardinia.",
-  keywords: [
-    "Sardinia United",
-    "non-profit",
-    "futsal",
-    "children",
-    "social inclusion",
-    "Sardinia"
-  ]
+    "Sport per Tutti - Sport, Inclusione e Solidarietà per i Giovani",
+  icons: { icon: "/favicon.ico" },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="it">
-      <body>{children}</body>
-    </html>
-  );
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return children;
 }
