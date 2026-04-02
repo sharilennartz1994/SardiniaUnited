@@ -46,19 +46,20 @@
     },
     "Mission": {
       "tag": "· La Nostra Missione ·",
-      "quote": "\"Lo sport come diritto educativo e di inclusione senza barriere economiche.\"",
+      "quoteBefore": "Lo sport come diritto educativo e di",
       "highlightWord": "inclusione",
+      "quoteAfter": "senza barriere economiche.",
       "body": "ASD Sardinia United nasce dalla volontà di abbattere ogni ostacolo tra i giovani e il campo da gioco. Offriamo eccellenza sportiva a costo zero per le famiglie."
     },
     "Stats": {
       "stat1": "80",
       "label1": "Bambini",
-      "stat2": "60",
+      "stat2": "60~",
       "label2": "Famiglie",
-      "stat3": "4",
+      "stat3": "4~",
       "label3": "Tornei",
-      "stat4": "5",
-      "label4": "Anni"
+      "stat4": "4-12",
+      "label4": "Anni (di progetto)"
     },
     "HowItWorks": {
       "title": "Come Funziona",
@@ -150,8 +151,8 @@
     "admin": "Amministrazione e Gestione",
     "preferBank": "Preferisci il bonifico?",
     "contactUs": "Contattaci: asdsardiniaunited@gmail.com",
-    "testimonialQuote": "«Senza ASD Sardinia United non avremmo potuto permettere a nostro figlio di giocare. La squadra è diventata la sua seconda famiglia.»",
-    "testimonialAuthor": "- Genitori di un atleta del progetto",
+    "testimonialQuote": "«Il talento ti fa vincere una partita. Il lavoro di squadra e l'intelligenza ti fanno vincere un campionato.»",
+    "testimonialAuthor": "- Michael Jordan",
     "changeAmount": "Cambia importo",
     "openFullPage": "Apri pagina completa"
   },
@@ -372,7 +373,7 @@
     "phoneNumber": "+39 349 2358494"
   },
   "Metadata": {
-    "homeTitle": "Sport per Tutti — ASD Sardinia United | Calcio a 5 Gratuito per Bambini a Elmas",
+    "homeTitle": "Sport per Tutti - ASD Sardinia United | Calcio a 5 Gratuito per Bambini a Elmas",
     "homeDescription": "Garantiamo a bambini e ragazzi (4–12 anni) di famiglie svantaggiate la possibilità di praticare calcio a 5 gratuitamente, con il supporto di una psicologa dello sport. ASD Sardinia United, Elmas (CA), Sardegna.",
     "donazioniTitle": "Donazioni - ASD Sardinia United",
     "donazioniDescription": "Sostieni il progetto Sport per Tutti. La tua donazione permette a un bambino di scoprire lo sport gratuitamente.",

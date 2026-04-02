@@ -14,9 +14,7 @@ export function MissionSection() {
         </span>
 
         <blockquote className="font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-brand-navy">
-          &ldquo;Lo sport come diritto educativo e di{" "}
-          <span className="text-brand-blue">{t("highlightWord")}</span> —
-          senza barriere economiche.&rdquo;
+          &ldquo;{t("quoteBefore")}{" "}<span className="text-brand-blue">{t("highlightWord")}</span>{" "}{t("quoteAfter")}&rdquo;
         </blockquote>
 
         <p className="mt-8 text-lg md:text-xl text-slate-600 font-body max-w-2xl mx-auto">

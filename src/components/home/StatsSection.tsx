@@ -5,10 +5,10 @@ export function StatsSection() {
   const t = useTranslations("Home.Stats");
 
   const stats = [
-    { target: 80, label: t("label1") },
-    { target: 60, label: t("label2") },
-    { target: 4, label: t("label3") },
-    { target: 5, label: t("label4") },
+    { target: 80, suffix: "", label: t("label1") },
+    { target: 60, suffix: "~", label: t("label2") },
+    { target: 4, suffix: "~", label: t("label3") },
+    { target: 5, suffix: "", label: t("label4") },
   ];
 
   return (
@@ -16,10 +16,17 @@ export function StatsSection() {
       <div className="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
         {stats.map((stat) => (
           <div key={stat.label} className="text-center group">
-            <AnimatedCounter
-              target={stat.target}
-              className="font-mono text-6xl md:text-8xl font-bold text-brand-blue block mb-2 group-hover:scale-110 transition-transform duration-500"
-            />
+            {"staticText" in stat && stat.staticText ? (
+              <span className="font-mono text-6xl md:text-8xl font-bold text-brand-blue block mb-2 group-hover:scale-110 transition-transform duration-500">
+                {stat.staticText}
+              </span>
+            ) : (
+              <AnimatedCounter
+                target={stat.target}
+                suffix={stat.suffix}
+                className="font-mono text-6xl md:text-8xl font-bold text-brand-blue block mb-2 group-hover:scale-110 transition-transform duration-500"
+              />
+            )}
             <div className="font-display text-[10px] sm:text-sm uppercase tracking-widest text-white/60">
               {stat.label}
             </div>
