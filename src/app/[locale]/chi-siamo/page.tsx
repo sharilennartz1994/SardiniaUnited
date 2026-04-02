@@ -2,13 +2,22 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 const TEAM_MEMBERS = [
-  { initials: "MS", nameKey: "team1Name", roleKey: "team1Role", bioKey: "team1Bio" },
-  { initials: "LM", nameKey: "team2Name", roleKey: "team2Role", bioKey: "team2Bio" },
-  { initials: "EC", nameKey: "team3Name", roleKey: "team3Role", bioKey: "team3Bio" },
-  { initials: "AP", nameKey: "team4Name", roleKey: "team4Role", bioKey: "team4Bio" },
-  { initials: "GS", nameKey: "team5Name", roleKey: "team5Role", bioKey: "team5Bio" },
-  { initials: "RL", nameKey: "team6Name", roleKey: "team6Role", bioKey: "team6Bio" },
+  { nameKey: "team1Name", roleKey: "team1Role", bioKey: "team1Bio" },
+  { nameKey: "team2Name", roleKey: "team2Role", bioKey: "team2Bio" },
+  { nameKey: "team3Name", roleKey: "team3Role", bioKey: "team3Bio" },
+  { nameKey: "team4Name", roleKey: "team4Role", bioKey: "team4Bio" },
+  { nameKey: "team5Name", roleKey: "team5Role", bioKey: "team5Bio" },
+  { nameKey: "team6Name", roleKey: "team6Role", bioKey: "team6Bio" },
 ] as const;
+
+function getInitials(name: string): string {
+  return name
+    .split(" ")
+    .map((w) => w[0])
+    .join("")
+    .toUpperCase()
+    .slice(0, 2);
+}
 
 export async function generateMetadata({
   params,
@@ -26,12 +35,16 @@ export async function generateMetadata({
 export default async function ChiSiamoPage() {
   const t = await getTranslations("ChiSiamo");
 
-  const teamMembers = TEAM_MEMBERS.map((member) => ({
-    ...member,
-    name: t(member.nameKey),
-    role: t(member.roleKey),
-    bio: t(member.bioKey),
-  }));
+  const teamMembers = TEAM_MEMBERS.map((member) => {
+    const name = t(member.nameKey);
+    return {
+      ...member,
+      name,
+      initials: getInitials(name),
+      role: t(member.roleKey),
+      bio: t(member.bioKey),
+    };
+  });
 
   const departments = [
     { key: "govTech", label: t("govTech") },
