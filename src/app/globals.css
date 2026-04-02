@@ -1,58 +1,61 @@
 @import "tailwindcss";
 
 @theme {
-  --color-sky-50: #f5f8ff;
-  --color-sky-100: #e8efff;
-  --color-sky-200: #cfddff;
-  --color-sky-300: #a8c0ff;
-  --color-sky-400: #799eff;
-  --color-sky-500: #4a77f0;
-  --color-sky-600: #234fc6;
-  --color-sky-700: #06008f;
-  --color-sky-800: #04006e;
-  --color-sky-900: #02004b;
-  --color-sky-950: #010033;
+  --color-brand-navy: #020c33;
+  --color-brand-blue: #1874bb;
+  --color-brand-blue-dark: #3363ad;
+  --color-brand-brown: #663b0c;
+  --color-brand-brown-light: #784b1a;
+
+  --font-display: var(--font-barlow);
+  --font-body: var(--font-dm-sans);
+  --font-mono: var(--font-space-mono);
 }
 
-:root {
-  --background: #f7f8fc;
-  --foreground: #02004b;
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
-    "Apple Color Emoji", "Segoe UI Emoji";
-  background-image:
-    radial-gradient(circle at 10% 10%, rgba(121, 158, 255, 0.2), transparent 35%),
-    radial-gradient(circle at 90% 0%, rgba(233, 196, 106, 0.22), transparent 30%);
-}
-
-@keyframes float-soft {
-  0%,
-  100% {
-    transform: translateY(0);
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
-  50% {
-    transform: translateY(-8px);
+
+  ::selection {
+    background-color: var(--color-brand-blue);
+    color: white;
   }
 }
 
-@keyframes pulse-soft {
-  0%,
-  100% {
-    opacity: 0.35;
+@layer utilities {
+  .diagonal-cut {
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
   }
-  50% {
-    opacity: 0.6;
+
+  .diagonal-cut-reverse {
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
   }
 }
 
-.animate-float-soft {
-  animation: float-soft 6s ease-in-out infinite;
+@layer base {
+  .skip-to-content {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    padding: 0.5rem 1rem;
+    background: var(--color-brand-blue);
+    color: white;
+    font-weight: 700;
+  }
+  .skip-to-content:focus {
+    left: 0;
+  }
 }
 
-.animate-pulse-soft {
-  animation: pulse-soft 4s ease-in-out infinite;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
