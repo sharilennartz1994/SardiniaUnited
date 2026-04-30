@@ -8,6 +8,13 @@ const TEAM_MEMBERS = [
   { nameKey: "team4Name", roleKey: "team4Role", bioKey: "team4Bio" },
   { nameKey: "team5Name", roleKey: "team5Role", bioKey: "team5Bio" },
   { nameKey: "team6Name", roleKey: "team6Role", bioKey: "team6Bio" },
+  { nameKey: "team7Name", roleKey: "team7Role", bioKey: "team7Bio" },
+  { nameKey: "team8Name", roleKey: "team8Role", bioKey: "team8Bio" },
+  { nameKey: "team9Name", roleKey: "team9Role", bioKey: "team9Bio" },
+  { nameKey: "team10Name", roleKey: "team10Role", bioKey: "team10Bio" },
+  { nameKey: "team11Name", roleKey: "team11Role", bioKey: "team11Bio" },
+  { nameKey: "team12Name", roleKey: "team12Role", bioKey: "team12Bio" },
+  { nameKey: "team13Name", roleKey: "team13Role", bioKey: "team13Bio" },
 ] as const;
 
 function getInitials(name: string): string {
