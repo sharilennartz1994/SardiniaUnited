@@ -6,7 +6,6 @@ export const routing = defineRouting({
   pathnames: {
     "/": "/",
     "/donazioni": { it: "/donazioni", en: "/donate" },
-    "/sponsor": { it: "/sponsor", en: "/sponsors" },
     "/chi-siamo": { it: "/chi-siamo", en: "/about" },
     "/blog": { it: "/blog", en: "/blog" },
     "/blog/[slug]": { it: "/blog/[slug]", en: "/blog/[slug]" },

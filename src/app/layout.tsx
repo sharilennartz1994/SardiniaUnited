@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: "ASD Sardinia United",
   description:
     "Sport per Tutti - Sport, Inclusione e Solidarietà per i Giovani",
-  icons: { icon: "/favicon.ico" },
 };
 
 export default function RootLayout({

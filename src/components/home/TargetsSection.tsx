@@ -15,6 +15,7 @@ export function TargetsSection() {
     { name: t("age1Name"), range: t("age1Range") },
     { name: t("age2Name"), range: t("age2Range") },
     { name: t("age3Name"), range: t("age3Range") },
+    { name: t("age4Name"), range: t("age4Range") },
   ];
 
   return (

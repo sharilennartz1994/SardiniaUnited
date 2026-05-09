@@ -7,7 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "",
     "/donazioni",
-    "/sponsor",
     "/chi-siamo",
     "/blog",
     "/calendario",
