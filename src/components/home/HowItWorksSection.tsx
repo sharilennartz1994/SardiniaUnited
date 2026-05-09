@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { Trophy, Brain, Users } from "lucide-react";
+import { Trophy, Brain, Users, Apple } from "lucide-react";
 
 export function HowItWorksSection() {
   const t = useTranslations("Home.HowItWorks");
@@ -26,6 +26,13 @@ export function HowItWorksSection() {
       borderColor: "border-green-600",
       iconBg: "bg-green-100 text-green-700",
     },
+    {
+      icon: <Apple size={32} />,
+      title: t("card4Title"),
+      body: t("card4Body"),
+      borderColor: "border-amber-500",
+      iconBg: "bg-amber-100 text-amber-800",
+    },
   ];
 
   return (
@@ -38,7 +45,7 @@ export function HowItWorksSection() {
           <div className="h-1 w-24 bg-brand-blue" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {cards.map((card) => (
             <div
               key={card.title}
