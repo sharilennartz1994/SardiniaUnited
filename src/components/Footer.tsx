@@ -3,10 +3,19 @@ import { Link } from "@/i18n/navigation";
 
 export function Footer() {
   const t = useTranslations("Footer");
+  const tNav = useTranslations("Nav");
+
+  const navLinks = [
+    { href: "/" as const, label: tNav("home") },
+    { href: "/chi-siamo" as const, label: tNav("project") },
+    { href: "/calendario" as const, label: tNav("activities") },
+    { href: "/blog" as const, label: tNav("blog") },
+    { href: "/donazioni" as const, label: tNav("donate") },
+  ];
 
   return (
     <footer className="bg-brand-navy w-full border-t border-white/10">
-      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 px-6 md:px-8 py-16">
+      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6 md:px-8 py-16">
         <div>
           <span className="text-xl font-display font-bold text-white uppercase tracking-tighter mb-4 block">
             SARDINIA UNITED
@@ -21,62 +30,16 @@ export function Footer() {
             {t("navigation")}
           </h5>
           <ul className="space-y-4">
-            <li>
-              <Link
-                href="/chi-siamo"
-                className="text-slate-400 hover:text-white transition-colors text-sm"
-              >
-                {t("chiSiamo")}
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/"
-                className="text-slate-400 hover:text-white transition-colors text-sm"
-              >
-                {t("progetto")}
-              </Link>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-slate-400 hover:text-white transition-colors text-sm"
-              >
-                {t("trasparenza")}
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h5 className="text-white font-bold mb-6 font-display uppercase tracking-widest text-xs">
-            {t("legal")}
-          </h5>
-          <ul className="space-y-4">
-            <li>
-              <a
-                href="#"
-                className="text-slate-400 hover:text-white transition-colors text-sm"
-              >
-                {t("privacy")}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-slate-400 hover:text-white transition-colors text-sm"
-              >
-                {t("terms")}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-slate-400 hover:text-white transition-colors text-sm"
-              >
-                {t("cookies")}
-              </a>
-            </li>
+            {navLinks.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="text-slate-400 hover:text-white transition-colors text-sm"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -110,7 +73,6 @@ export function Footer() {
               {t("email")}
             </a>
           </p>
-          <p>{t("pec")}</p>
         </div>
       </div>
     </footer>

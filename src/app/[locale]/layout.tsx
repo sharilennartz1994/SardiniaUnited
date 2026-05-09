@@ -56,7 +56,7 @@ export default async function LocaleLayout({
               alternateName: "Sport per Tutti",
               url: "https://sardiniaunited.it",
               description:
-                "Associazione sportiva dilettantistica che garantisce a bambini e ragazzi (4-12 anni) di famiglie economicamente svantaggiate la possibilità di praticare calcio a 5 gratuitamente, con il supporto di una psicologa dello sport.",
+                "Associazione sportiva dilettantistica che garantisce a bambini e ragazzi (5-12 anni) di famiglie economicamente svantaggiate la possibilità di praticare calcio a 5 gratuitamente, con il supporto di una psicologa dello sport.",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Via Giuseppe Dessì 1",
@@ -65,7 +65,7 @@ export default async function LocaleLayout({
                 addressRegion: "CA",
                 addressCountry: "IT",
               },
-              email: "asdsardiniaunited@gmail.com",
+              email: "info@asdsardiniaunited.com",
               taxID: "92288140921",
               sport: "Futsal",
               foundingDate: "2026",

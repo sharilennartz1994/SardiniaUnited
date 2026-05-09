@@ -27,7 +27,6 @@ export function Navbar() {
     { href: "/chi-siamo" as const, label: t("project") },
     { href: "/calendario" as const, label: t("activities") },
     { href: "/blog" as const, label: t("blog") },
-    { href: "/sponsor" as const, label: "Sponsor" },
   ];
 
   return (

@@ -15,8 +15,8 @@ export async function generateMetadata({
     description: t("donazioniDescription"),
     keywords: [
       "donazioni",
+      "bonifico",
       "sardinia united",
-      "yapla",
       "sport per tutti",
       "associazione sportiva",
     ],
@@ -157,25 +157,6 @@ export default async function DonazioniPage({
           </div>
         </section>
 
-        <section
-          className="mt-16 rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-md md:p-10"
-          aria-labelledby="bank-note-heading"
-        >
-          <h2
-            id="bank-note-heading"
-            className="font-display text-lg font-bold uppercase tracking-wide text-brand-navy"
-          >
-            {t("preferBank")}
-          </h2>
-          <p className="mt-4 font-body text-gray-600">
-            <a
-              href="mailto:asdsardiniaunited@gmail.com"
-              className="text-brand-blue underline-offset-2 hover:underline focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
-            >
-              {t("contactUs")}
-            </a>
-          </p>
-        </section>
       </div>
     </div>
   );
