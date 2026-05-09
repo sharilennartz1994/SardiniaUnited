@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { Barlow_Condensed, DM_Sans, Space_Mono } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { Navbar } from "@/components/Navbar";
@@ -42,6 +42,7 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages();
+  const tNav = await getTranslations({ locale, namespace: "Nav" });
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -78,14 +79,13 @@ export default async function LocaleLayout({
         className={`${barlowCondensed.variable} ${dmSans.variable} ${spaceMono.variable} font-body antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          <a
-            href="#main-content"
-            className="skip-to-content focus-visible:ring-2 focus-visible:ring-brand-blue"
-          >
-            Skip to content
+          <a href="#main-content" className="skip-to-content">
+            {tNav("skipToContent")}
           </a>
           <Navbar />
-          <main id="main-content">{children}</main>
+          <main id="main-content" tabIndex={-1}>
+            {children}
+          </main>
           <Footer />
         </NextIntlClientProvider>
       </body>
