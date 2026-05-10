@@ -24,7 +24,7 @@ export function Navbar() {
 
   const navLinks = [
     { href: "/" as const, label: t("home") },
-    { href: "/chi-siamo" as const, label: t("project") },
+    { href: "/chi-siamo" as const, label: t("chiSiamo") },
     { href: "/calendario" as const, label: t("activities") },
     { href: "/blog" as const, label: t("blog") },
   ];

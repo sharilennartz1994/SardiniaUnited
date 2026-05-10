@@ -7,7 +7,7 @@ export function Footer() {
 
   const navLinks = [
     { href: "/" as const, label: tNav("home") },
-    { href: "/chi-siamo" as const, label: tNav("project") },
+    { href: "/chi-siamo" as const, label: tNav("chiSiamo") },
     { href: "/calendario" as const, label: tNav("activities") },
     { href: "/blog" as const, label: tNav("blog") },
     { href: "/donazioni" as const, label: tNav("donate") },

@@ -60,16 +60,8 @@ export default async function ChiSiamoPage() {
     { key: "govDev", label: t("govDev") },
   ] as const;
 
-  const partnerLabels = [
-    "CONI",
-    "CIP",
-    "Sport e Salute",
-    "Regione Sardegna",
-    "Comune di Elmas",
-  ];
-
   return (
-    <main className="font-body text-brand-navy">
+    <div className="font-body text-brand-navy">
       {/* Hero */}
       <section
         className="relative diagonal-cut overflow-hidden bg-brand-navy pb-24 pt-28 md:pb-32 md:pt-36"
@@ -186,19 +178,19 @@ export default async function ChiSiamoPage() {
 
       {/* Governance */}
       <section
-        className="bg-brand-navy py-16 md:py-24"
+        className="bg-white py-16 md:py-24"
         aria-labelledby="chi-siamo-gov-heading"
       >
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
           <h2
             id="chi-siamo-gov-heading"
-            className="text-center font-display text-3xl font-bold uppercase tracking-tight text-white md:text-4xl"
+            className="text-center font-display text-3xl font-bold uppercase tracking-tight text-brand-navy md:text-4xl"
           >
             {t("govTitle")}
           </h2>
 
           <div className="mt-12 flex flex-col items-center">
-            <div className="w-full max-w-md rounded-lg border-2 border-white/20 bg-white px-6 py-4 text-center shadow-lg">
+            <div className="w-full max-w-md rounded-lg border border-gray-200 bg-white px-6 py-4 text-center shadow-lg shadow-brand-navy/10">
               <p className="font-display text-sm font-bold uppercase tracking-widest text-brand-navy">
                 {t("govPresident")}
               </p>
@@ -211,9 +203,9 @@ export default async function ChiSiamoPage() {
               {departments.map((dept) => (
                 <div
                   key={dept.key}
-                  className="rounded-lg border-2 border-brand-blue bg-brand-navy/60 px-4 py-4 text-center shadow-md"
+                  className="rounded-lg border border-gray-200 bg-white px-4 py-4 text-center shadow-sm shadow-brand-navy/5"
                 >
-                  <h3 className="font-display text-sm font-bold uppercase tracking-wide text-white">
+                  <h3 className="font-display text-sm font-bold uppercase tracking-wide text-brand-navy">
                     {dept.label}
                   </h3>
                 </div>
@@ -221,38 +213,13 @@ export default async function ChiSiamoPage() {
             </div>
           </div>
 
-          <figure className="mx-auto mt-14 max-w-2xl rounded-xl border border-white/10 bg-white/5 px-6 py-6 text-center backdrop-blur-sm">
-            <blockquote className="font-display text-lg italic leading-relaxed text-white/80 md:text-xl">
+          <figure className="mx-auto mt-14 max-w-2xl rounded-xl border border-gray-200 bg-slate-50 px-6 py-6 text-center shadow-sm shadow-brand-navy/5">
+            <blockquote className="font-display text-lg italic leading-relaxed text-brand-navy/80 md:text-xl">
               {t("govQuote")}
             </blockquote>
           </figure>
         </div>
       </section>
-
-      {/* Partners */}
-      <section
-        className="bg-white py-14 md:py-20"
-        aria-labelledby="chi-siamo-partners-heading"
-      >
-        <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <h2
-            id="chi-siamo-partners-heading"
-            className="text-center font-display text-sm font-bold uppercase tracking-widest text-brand-navy/70"
-          >
-            {t("partnersTitle")}
-          </h2>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-6 md:gap-x-14">
-            {partnerLabels.map((label) => (
-              <span
-                key={label}
-                className="font-display text-lg font-bold uppercase text-brand-navy opacity-60 grayscale md:text-xl"
-              >
-                {label}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-    </main>
+    </div>
   );
 }
